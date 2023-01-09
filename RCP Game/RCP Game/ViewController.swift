@@ -12,6 +12,9 @@ class ViewController: UIViewController {
     //속성
     @IBOutlet weak var mainLabel: UILabel!
     
+    @IBOutlet weak var iPhoneLabel: UILabel!
+    @IBOutlet weak var myLabel: UILabel!
+    
     @IBOutlet weak var comImageView: UIImageView!
     @IBOutlet weak var myImageView: UIImageView!
     
@@ -39,16 +42,24 @@ class ViewController: UIViewController {
         // 1) 첫번째/두번째 이미지뷰에 준비 이미지를 띄워야 함
         comImageView.image = #imageLiteral(resourceName: "ready")
         myImageView.image = UIImage(named: "ready.png")
+        let fontsize: CGFloat = 20
+        let rpsCornerRadius: CGFloat = 22
+        let buttonRadious: CGFloat = 25
         
+        iPhoneLabel.font = UIFont.boldSystemFont(ofSize: fontsize)
+        myLabel.font = UIFont.boldSystemFont(ofSize: fontsize)
         // 2) 첫번쨰/두번쨰 레이블에 "준비"라고 문자열을 띄워야 함
         comChoiceLabel.text = "준비"
+        comChoiceLabel.font = UIFont.boldSystemFont(ofSize: fontsize)
         myChoiceLabel.text = "준비"
+        myChoiceLabel.font = UIFont.boldSystemFont(ofSize: fontsize)
         
-        resetButton.layer.cornerRadius = 22
-        selectButton.layer.cornerRadius = 22
-        scissorsButton.layer.cornerRadius = 25
-        rockButton.layer.cornerRadius = 25
-        paperButton.layer.cornerRadius = 25
+        resetButton.layer.cornerRadius = buttonRadious
+        selectButton.layer.cornerRadius = buttonRadious
+        
+        scissorsButton.layer.cornerRadius = rpsCornerRadius
+        rockButton.layer.cornerRadius = rpsCornerRadius
+        paperButton.layer.cornerRadius = rpsCornerRadius
         
     }
     
@@ -128,6 +139,13 @@ class ViewController: UIViewController {
     }
     
     @IBAction func resetButtonTapped(_ sender: UIButton) {
+        comImageView.image = UIImage(named: "ready.png")
+        comChoiceLabel.text = "준비"
+        mainLabel.text = "선택하세요"
+        myImageView.image = UIImage(named: "ready.png")
+        myChoiceLabel.text = "준비"
+        mainLabel.text = "선택하세요 !"
+        comChoice = Rps(rawValue: Int.random(in: 0...2))!
         // 1) 컴퓨터 다시 준비 이미지뷰에 표시
         // 2) 컴퓨터 다시 준비 레이블에 표시
         // 3) 나 다시 준비 이미지뷰에 표시

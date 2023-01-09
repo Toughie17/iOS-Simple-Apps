@@ -197,9 +197,11 @@
                     <connections>
                         <outlet property="comChoiceLabel" destination="HoM-n0-89d" id="bLd-f7-jAo"/>
                         <outlet property="comImageView" destination="lRy-bt-JvB" id="999-wj-Koa"/>
+                        <outlet property="iPhoneLabel" destination="H10-UE-Z5z" id="KKd-4e-4cG"/>
                         <outlet property="mainLabel" destination="AJS-c6-ATL" id="c8o-6Q-MaT"/>
                         <outlet property="myChoiceLabel" destination="5G8-KN-Nm2" id="8zw-M2-IIJ"/>
                         <outlet property="myImageView" destination="Rlb-VZ-BT7" id="KQJ-Bj-2UE"/>
+                        <outlet property="myLabel" destination="KIM-Ej-ZNz" id="veh-Tg-vbY"/>
                         <outlet property="paperButton" destination="IXL-Yr-Bs2" id="JeY-iB-3iN"/>
                         <outlet property="resetButton" destination="rBa-nG-kwY" id="CX6-Mw-791"/>
                         <outlet property="rockButton" destination="abR-wm-2sv" id="TJz-6R-5Pc"/>
