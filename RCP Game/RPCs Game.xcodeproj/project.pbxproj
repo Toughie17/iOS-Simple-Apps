@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		864CA7AF296BF72E000C2D35 /* Rps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864CA7AE296BF72E000C2D35 /* Rps.swift */; };
 		86E76ABA29694ADA00F8B67B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E76AB929694ADA00F8B67B /* AppDelegate.swift */; };
 		86E76ABC29694ADA00F8B67B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E76ABB29694ADA00F8B67B /* SceneDelegate.swift */; };
 		86E76ABE29694ADA00F8B67B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E76ABD29694ADA00F8B67B /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		864CA7AE296BF72E000C2D35 /* Rps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rps.swift; sourceTree = "<group>"; };
 		86E76AB629694ADA00F8B67B /* RPCs Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RPCs Game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		86E76AB929694ADA00F8B67B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		86E76ABB29694ADA00F8B67B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 			children = (
 				86E76AB929694ADA00F8B67B /* AppDelegate.swift */,
 				86E76ABB29694ADA00F8B67B /* SceneDelegate.swift */,
+				864CA7AE296BF72E000C2D35 /* Rps.swift */,
 				86E76ABD29694ADA00F8B67B /* ViewController.swift */,
 				86E76ABF29694ADA00F8B67B /* Main.storyboard */,
 				86E76AC229694ADC00F8B67B /* Assets.xcassets */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				86E76ABE29694ADA00F8B67B /* ViewController.swift in Sources */,
+				864CA7AF296BF72E000C2D35 /* Rps.swift in Sources */,
 				86E76ABA29694ADA00F8B67B /* AppDelegate.swift in Sources */,
 				86E76ABC29694ADA00F8B67B /* SceneDelegate.swift in Sources */,
 			);
