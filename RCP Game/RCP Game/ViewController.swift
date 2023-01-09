@@ -19,6 +19,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var comChoiceLabel: UILabel!
     @IBOutlet weak var myChoiceLabel: UILabel!
     
+    @IBOutlet weak var resetButton: UIButton!
+    @IBOutlet weak var selectButton: UIButton!
+    
+    @IBOutlet weak var scissorsButton: UIButton!
+    @IBOutlet weak var rockButton: UIButton!
+    @IBOutlet weak var paperButton: UIButton!
+    
     var comChoice: Rps = Rps(rawValue: Int.random(in: 0...2))!
     
     var myChoice: Rps = Rps.rock
@@ -36,6 +43,12 @@ class ViewController: UIViewController {
         // 2) 첫번쨰/두번쨰 레이블에 "준비"라고 문자열을 띄워야 함
         comChoiceLabel.text = "준비"
         myChoiceLabel.text = "준비"
+        
+        resetButton.layer.cornerRadius = 22
+        selectButton.layer.cornerRadius = 22
+        scissorsButton.layer.cornerRadius = 25
+        rockButton.layer.cornerRadius = 25
+        paperButton.layer.cornerRadius = 25
         
     }
     
@@ -78,9 +91,40 @@ class ViewController: UIViewController {
             comImageView.image = #imageLiteral(resourceName: "scissors")
             comChoiceLabel.text = "가위"
         }
+        
+        
+        switch myChoice {
+        case Rps.rock:
+            myImageView.image = #imageLiteral(resourceName: "rock")
+            myChoiceLabel.text = "바위"
+            
+        case Rps.paper:
+            myImageView.image = #imageLiteral(resourceName: "paper")
+            myChoiceLabel.text = "보"
+            
+        case Rps.scissors:
+            myImageView.image = #imageLiteral(resourceName: "scissors")
+            myChoiceLabel.text = "가위"
+        }
         // 3) 내가 선택한 것을 이미지뷰에 표시
         // 4) 내가 선택한 것을 레이블에 표시
         // 5) 컴퓨터가 선택한 것과 내가 선택한 것을 비교해서 이겼는지 졌는지 판단/표시
+        
+        if comChoice == myChoice {
+            mainLabel.text = "비겼어요..🤨"
+        } else if comChoice == .rock && myChoice == .paper {
+            mainLabel.text = "이겼어요 ! 🥳"
+        } else if comChoice == .paper && myChoice == .scissors {
+            mainLabel.text = "이겼어요 ! 🥳"
+        } else if comChoice == .scissors && myChoice == .rock {
+            mainLabel.text = "이겼어요 ! 🥳"
+        } else {
+            mainLabel.text = "졌어요.. 🤬"
+        }
+        
+        
+        
+        
     }
     
     @IBAction func resetButtonTapped(_ sender: UIButton) {
