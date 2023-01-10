@@ -66,8 +66,8 @@ class ViewController: UIViewController {
 
     @IBAction func rpsButtonTapped(_ sender: UIButton) {
         // 가위/바위/보를 선택해서 그 정보를 저장해야됨
-//        guard let title = sender.currentTitle else { return }
-        let title = sender.currentTitle! //버튼의 문자를 가져옴
+        guard let title = sender.currentTitle else { return }
+//        let title = sender.currentTitle! //버튼의 문자를 가져옴
         print(title)
         
         switch title {
