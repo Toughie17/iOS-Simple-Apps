@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // 1) 메인레이블에 "선택하세요" 표시
-        mainLabel.text = "선택하세요"
+        mainLabel.text = "선택하세요 🤔"
         // 2) 숫자레이블은 ""
         numberLabel.text = ""
         
@@ -29,6 +29,11 @@ class ViewController: UIViewController {
 
     @IBAction func buttonTapped(_ sender: UIButton) {
         // 1) 버튼의 숫자를 가져와야함
+        guard let numString = sender.currentTitle else { return }
+        numberLabel.text = numString
+        
+        guard let num = UInt(numString) else { return }
+        myChoice = num
         // 2) 숫자 레이블이 변하도록 (숫자에 따라)
         // 3) 선택한 숫자를 변수에 저장
         
@@ -36,6 +41,14 @@ class ViewController: UIViewController {
     
     
     @IBAction func selectButtonTapped(_ sender: UIButton) {
+        
+        if computerChoice > myChoice {
+            mainLabel.text = "Up 😜"
+        } else if computerChoice < myChoice {
+            mainLabel.text = "Down 👻"
+        } else {
+            mainLabel.text = "Bingo! 🥳"
+        }
         // 1) 컴퓨터의 숫자와 내가 선택한 숫자를 비교 UP/Down/Bingo (메인레이블)
         
     }
