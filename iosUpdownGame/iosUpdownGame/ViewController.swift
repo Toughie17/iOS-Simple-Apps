@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        mainLabel.text = "숫자를 선택하세요 🤔"
         numberLabel.text = ""
     }
     
